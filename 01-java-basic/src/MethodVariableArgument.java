@@ -7,6 +7,36 @@
  * */
 public class MethodVariableArgument {
     public static void main(String[] args) {
+        int[] values = {60, 80, 70, 95, 70};
+        average("Andi", values);
+        average22("Andi", values);
+    }
 
+    // tanpa variable argument
+    static void average(String name, int[] values){
+        var total = 0;
+        for (var value: values){
+            total += value;
+        }
+        var finalValue = total/values.length;
+        if (finalValue >= 75){
+            System.out.println("Selamat "+name+", Anda lulus");
+        }else{
+            System.out.println("Maaf "+name+", Anda tidak lulus");
+        }
+    }
+
+    // dengan variable argument
+    static void average22(String name, int... values){
+        var total = 0;
+        for (var value: values){
+            total += value;
+        }
+        var finalValue = total/values.length;
+        if (finalValue >= 75){
+            System.out.println("Selamat "+name+", Anda lulus");
+        }else{
+            System.out.println("Maaf "+name+", Anda tidak lulus");
+        }
     }
 }
