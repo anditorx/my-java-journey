@@ -1,11 +1,13 @@
 public class AppTodoList {
 
    public static String[] model = new String[10];
+   public static java.util.Scanner scanner = new java.util.Scanner(System.in);
 
     public static void main(String[] args) {
 //      testShowTodoList();
 //      testAddTodoList();
-        testRemoveTodoList();
+//        testRemoveTodoList();
+        testInput();
     }
 
     /**
@@ -21,12 +23,12 @@ public class AppTodoList {
          }
         }
     }
-    public static void testShowTodoList (){
-        model[0]= "Belajar Java Basic";
-        model[1]= "Belajar Java OOP";
-        model[2]= "Buat aplikasi todo list sederhana menggunakan java";
-        showTodoList();
-    }
+//    public static void testShowTodoList (){
+//        model[0]= "Belajar Java Basic";
+//        model[1]= "Belajar Java OOP";
+//        model[2]= "Buat aplikasi todo list sederhana menggunakan java";
+//        showTodoList();
+//    }
 
     /**
      * Menambah ToDo ke List
@@ -59,12 +61,12 @@ public class AppTodoList {
             }
         }
     }
-    public static void testAddTodoList(){
-        for (int i=0; i< 20; i++){
-            addTodoList("Test ke-"+i);
-        }
-        showTodoList();
-    }
+//    public static void testAddTodoList(){
+//        for (int i=0; i< 20; i++){
+//            addTodoList("Test ke-"+i);
+//        }
+//        showTodoList();
+//    }
     /**
      * Menghapus ToDo dari List
      * */
@@ -100,6 +102,21 @@ public class AppTodoList {
         result = removeTodoList(2);
         System.out.println(result);
         showTodoList();
+    }
+    /**
+     * melakukan input todo
+     * */
+    public static String input(String info){
+        System.out.print(info + " : ");
+        String data = scanner.nextLine();
+        return data;
+    }
+    public static void testInput(){
+       var name = input("Nama");
+       var prodi = input("Prodi");
+
+        System.out.println("Hi "+ name);
+       System.out.println("Selamat datang di keluarga besar "+ prodi);
     }
     /**
      * Menampilkan view todo list
