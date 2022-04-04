@@ -8,9 +8,10 @@ public class PersonApp {
         var person2 = new Person();
         var person3 = new Person();
 
+        person1.name = "Andito";
+        person1.address = "Jakarta";
 
-        System.out.println(person1);
-        System.out.println(person2)
-        System.out.println(person3);;
+        System.out.println(person1.name);
+        System.out.println(person1.address);
     }
 }
