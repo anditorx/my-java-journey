@@ -4,14 +4,21 @@
  * */
 public class PersonApp {
     public static void main(String[] args) {
-        var person1 = new Person();
-        var person2 = new Person();
-        var person3 = new Person();
+        var person1 = new Person("Andi", "Pontianak");
 
         person1.name = "Andito";
         person1.address = "Jakarta";
 
         System.out.println(person1.name);
         System.out.println(person1.address);
+
+        System.out.println("---");
+
+        person1.sayHi("Donni");
+
+        System.out.println("---");
+
+        Person person2 = new Person("Rocky", "Maluku");
+        System.out.println(person2);
     }
 }
